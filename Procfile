@@ -1,1 +1,1 @@
-web: gunicorn app:ms-prbipmetro-py
+web: gunicorn ms-prbipmetro-py:app
