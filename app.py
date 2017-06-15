@@ -61,10 +61,7 @@ def get_in_range():
 
 def app(environ, start_response):
     port = int(os.environ.get('PORT', 9000))
-    if bool(os.environ.get('NOT_HEROKU', False)):
-        application.run(host='0.0.0.0', port=port)
-    else:
-        application.run(port=port)
+    application.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
     app(None, None)
